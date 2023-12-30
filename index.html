@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Spend Elon Musk Money</title>
+</head>
+<body>
+    <header>
+        <h1>Total Money: <span id="totalMoney">$254700000000.00</span></h1>
+        <div id="sortBy">
+            <label for="sortOption">Sort by:</label>
+            <select id="sortOption" onchange="sortItems()">
+                <option value="expensive">Expensive</option>
+                <option value="cheap">Cheap</option>
+                <option value="rare">Rare</option>
+                <!-- Add more sorting options as needed -->
+            </select>
+        </div>
+    </header>
+    
+    <section id="items">
+        <!-- Airpod -->
+        <div class="item">
+            <img src="airpod.jpg" alt="Airpod" width="100">
+            <h2>Airpod</h2>
+            <p>$199</p>
+            <p id="purchaseCount_3">Purchases: 0</p>
+            <button onclick="purchaseItem(199, 'purchaseCount_3')">Purchase</button>
+        </div>
+<!-- Total Money Popup -->
+    <div id="totalMoneyPopup">
+        <span>Total Money: <span id="totalMoneyPopupValue">$254.7B</span></span>
+    </div>
+        <!-- Android Phone -->
+        <div class="item">
+            <img src="android_phone.png" alt="Android Phone" width="100">
+            <h2>Android Phone</h2>
+            <p>$799</p>
+            <p id="purchaseCount_4">Purchases: 0</p>
+            <button onclick="purchaseItem(799, 'purchaseCount_4')">Purchase</button>
+        </div>
+
+        <!-- Microsoft Laptop -->
+        <div class="item">
+            <img src="microsoft_laptop.png" alt="Microsoft Laptop" width="100">
+            <h2>Microsoft Laptop</h2>
+            <p>$1299</p>
+            <p id="purchaseCount_5">Purchases: 0</p>
+            <button onclick="purchaseItem(1299, 'purchaseCount_5')">Purchase</button>
+        </div>
+
+        <!-- iPhone -->
+        <div class="item">
+            <img src="iphone.png" alt="iPhone" width="100">
+            <h2>iPhone</h2>
+            <p>$999</p>
+            <p id="purchaseCount_1">Purchases: 0</p>
+            <button onclick="purchaseItem(999, 'purchaseCount_1')">Purchase</button>
+        </div>
+
+        <!-- MacBook -->
+        <div class="item">
+            <img src="macbook.png" alt="MacBook" width="100">
+            <h2>MacBook</h2>
+            <p>$1799</p>
+            <p id="purchaseCount_2">Purchases: 0</p>
+            <button onclick="purchaseItem(1799, 'purchaseCount_2')">Purchase</button>
+        </div>
+
+        <!-- Rolls Royce -->
+        <div class="item">
+            <img src="rolls_royce.png" alt="Rolls Royce" width="100">
+            <h2>Rolls Royce</h2>
+            <p>$350,000</p>
+            <p id="purchaseCount_6">Purchases: 0</p>
+            <button onclick="purchaseItem(350000, 'purchaseCount_6')">Purchase</button>
+        </div>
+
+        <!-- Lamborghini -->
+        <div class="item">
+            <img src="lamborghini.png" alt="Lamborghini" width="100">
+            <h2>Lamborghini</h2>
+            <p>$2.9M</p>
+            <p id="purchaseCount_7">Purchases: 0</p>
+            <button onclick="purchaseItem(2.9e6, 'purchaseCount_7')">Purchase</button>
+        </div>
+
+        <!-- Bugatti -->
+        <div class="item">
+            <img src="bugatti.png" alt="Bugatti" width="100">
+            <h2>Bugatti</h2>
+            <p>$3M</p>
+            <p id="purchaseCount_8">Purchases: 0</p>
+            <button onclick="purchaseItem(3e6, 'purchaseCount_8')">Purchase</button>
+        </div>
+
+        <!-- Private Jet -->
+        <div class="item">
+            <img src="private_jet.png" alt="Private Jet" width="100">
+            <h2>Private Jet</h2>
+            <p>$25M</p>
+            <p id="purchaseCount_9">Purchases: 0</p>
+            <button onclick="purchaseItem(25e6, 'purchaseCount_9')">Purchase</button>
+        </div>
+
+        <!-- Villa in Beach -->
+        <div class="item">
+            <img src="private_villa.png" alt="Villa" width="100">
+            <h2>Private Villaa </h2>
+            <p>$5M</p>
+            <p id="purchaseCount_10">Purchases: 0</p>
+            <button onclick="purchaseItem(5e6, 'purchaseCount_10')">Purchase</button>
+        </div>
+
+        <!-- Private Island -->
+        <div class="item">
+            <img src="private_island.png" alt="Private Island" width="100">
+            <h2>Private Island</h2>
+            <p>$50M</p>
+            <p id="purchaseCount_11">Purchases: 0</p>
+            <button onclick="purchaseItem(50e6, 'purchaseCount_11')">Purchase</button>
+        </div>
+
+        <!-- Smart TV -->
+        <div class="item">
+            <img src="smart_tv.png" alt="Smart TV" width="100">
+            <h2>Smart TV</h2>
+            <p>$499</p>
+            <p id="purchaseCount_12">Purchases: 0</p>
+            <button onclick="purchaseItem(499, 'purchaseCount_12')">Purchase</button>
+        </div>
+
+        <!-- Fridge -->
+        <div class="item">
+            <img src="fridge.png" alt="Fridge" width="100">
+            <h2>Fridge</h2>
+            <p>$299</p>
+            <p id="purchaseCount_13">Purchases: 0</p>
+            <button onclick="purchaseItem(299, 'purchaseCount_13')">Purchase</button>
+        </div>
+
+        <!-- Helicopter -->
+        <div class="item">
+            <img src="helicopter.png" alt="Helicopter" width="100">
+            <h2>Helicopter</h2>
+            <p>$10M</p>
+            <p id="purchaseCount_14">Purchases: 0</p>
+            <button onclick="purchaseItem(10e6, 'purchaseCount_14')">Purchase</button>
+        </div>
+
+        <!-- Private Yacht -->
+        <div class="item">
+            <img src="private_yacht.png" alt="Private Yacht" width="100">
+            <h2>Private Yacht</h2>
+            <p>$20M</p>
+            <p id="purchaseCount_15">Purchases: 0</p>
+            <button onclick="purchaseItem(20e6, 'purchaseCount_15')">Purchase</button>
+        </div>
+
+        <!-- Ship -->
+        <div class="item">
+            <img src="czabhishek.png" alt="Ship" width="100">
+            <h2>CZ ABHISHEK</h2>
+            <p>$?</p>
+            <p id="purchaseCount_16">Purchases: 0</p>
+            <button onclick="purchaseItem(199999999995e6, 'purchaseCount_16')">Purchase</button>
+        </div>
+
+        <!-- Cargo Ship -->
+        <div class="item">
+            <img src="cargo_ship.png" alt="Cargo Ship" width="100">
+            <h2>Cargo Ship</h2>
+            <p>$30M</p>
+            <p id="purchaseCount_17">Purchases: 0</p>
+            <button onclick="purchaseItem(30e6, 'purchaseCount_17')">Purchase</button>
+        </div>
+
+        <!-- Cargo Plane -->
+        <div class="item">
+            <img src="cargo_plane.png" alt="Cargo Plane" width="100">
+            <h2>Cargo Plane</h2>
+            <p>$50M</p>
+            <p id="purchaseCount_18">Purchases: 0</p>
+            <button onclick="purchaseItem(50e6, 'purchaseCount_18')">Purchase</button>
+        </div>
+
+      <a href="https://ok.com">Terms and conditions </a>
+    </section>
+     <footer>
+        <p>&copy; CZ ABHISHEK 2024</p>
+    </footer>
+</body>
+</html>
